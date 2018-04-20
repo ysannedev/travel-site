@@ -13,6 +13,8 @@ gulp.task('watch', function() {
 
     watch('./app/index.html', function() {
         // gulp.start('html');
+        return gulp.src('./app/index.html')
+            .pipe(browserSync.stream());
     });
 
     watch('./app/css/**/*.css', function() {
