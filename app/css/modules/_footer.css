@@ -1,0 +1,7 @@
+.footer {
+    background-color: $blue;
+    color: #fff;
+    text-align: center;
+    padding: 1.625rem 0;
+    font-weight: 300;
+}
