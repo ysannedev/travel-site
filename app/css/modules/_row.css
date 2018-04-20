@@ -2,10 +2,8 @@
 
     @mixin clearFix;
     
-    &__centered {
-        background-color: red;
-        /* margin: 0 auto; */
-        text-align: center;
+    &--t-margin {
+        margin-top: 100px;
     }
 
     &--gutters {
@@ -25,12 +23,6 @@
     }
 
     @mixin atMedium {
-
-        &__medium-3 {
-            /* background-color: yellow; */
-            float: left;
-            width: calc(100% * (3/12));
-        }
 
         &__medium-4 {
             float: left;
