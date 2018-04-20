@@ -662,10 +662,6 @@ a {
         display: table;
     }
 
-.row--t-margin {
-        margin-top: 100px;
-    }
-
 .row--gutters {
         margin-right: -65px;
     }
@@ -814,7 +810,15 @@ a {
 .testimonial-item {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 0 1.8125rem 1px 1.8125rem;
+    margin-top: 100px;
 }
+
+@media (min-width: 530px) {
+
+.testimonial-item {
+        margin-top: 80px
+}
+    }
 
 .testimonial-item__image {
         border-radius: 50%;
