@@ -1,0 +1,11 @@
+.testimonial-item {
+    margin-right: 5rem;
+    margin-left: auto;
+    &__image {
+        border-radius: 50%;
+        padding: 6px;
+        background-color: $blue;
+        display: block;
+        margin: 0 auto;
+    }
+}

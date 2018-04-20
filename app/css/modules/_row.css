@@ -1,19 +1,25 @@
 .row {
 
     @mixin clearFix;
+    
+    &__centered {
+        background-color: red;
+        /* margin: 0 auto; */
+        text-align: center;
+    }
 
     &--gutters {
         margin-right: -65px;
+    }
+    
+    &--gutters > div {
+        padding-right: 65px;
     }
 
     &--gutters-large {
         margin-right: -100px;
     }
-
-    &--gutters > div {
-        padding-right: 65px;
-    }
-
+    
     &--gutters-large > div {
         padding-right: 100px;
     }
@@ -21,6 +27,7 @@
     @mixin atMedium {
 
         &__medium-3 {
+            /* background-color: yellow; */
             float: left;
             width: calc(100% * (3/12));
         }

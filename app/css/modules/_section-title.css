@@ -11,6 +11,16 @@
         font-weight: 500;
     }
 
+    &--blue {
+        color: $blue;
+    }
+
+    &--bolder {
+        strong {
+            font-weight: 700;
+        }    
+    }
+
     &__icon {
         display: block;
         margin-left: auto;
