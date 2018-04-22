@@ -585,6 +585,45 @@ a {
     }
     }
 
+.wrapper--no-padding-until-small {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+@media (min-width: 530px) {
+
+.wrapper--no-padding-until-small {
+            padding-left: 18px;
+            padding-right: 18px
+    }
+    }
+
+.wrapper--no-padding-until-medium {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+@media (min-width: 800px) {
+
+.wrapper--no-padding-until-medium {
+            padding-left: 18px;
+            padding-right: 18px
+    }
+    }
+
+.wrapper--no-padding-until-large {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+@media (min-width: 1010px) {
+
+.wrapper--no-padding-until-large {
+            padding-left: 18px;
+            padding-right: 18px
+    }
+    }
+
 .page-section {
     padding: 1.2rem 0;
 }
@@ -602,8 +641,37 @@ a {
     }
 
 .page-section--testimonials {
-        background: url('/assets/images/testimonial/testimonials-bg.jpg') top center;
-        background-size: cover;
+        background-color: #e0e6ef;
+    }
+
+@media (min-width: 1010px) {
+
+.page-section--testimonials {
+            background: url('/assets/images/testimonial/testimonials-bg.jpg') top center;
+            background-size: cover
+    }
+    }
+
+.page-section--no-b-padding-until-medium {
+        padding-bottom: 0;
+    }
+
+@media (min-width: 800px) {
+
+.page-section--no-b-padding-until-medium {
+            padding-bottom: 4.5rem
+    }
+    }
+
+.page-section--no-b-padding-until-large {
+        padding-bottom: 0;
+    }
+
+@media (min-width: 1010px) {
+
+.page-section--no-b-padding-until-large {
+            padding-bottom: 4.5rem
+    }
     }
 
 .headline {
@@ -662,6 +730,10 @@ a {
         display: table;
     }
 
+.row--t-padding {
+        padding-top: 80px;
+    }
+
 .row--gutters {
         margin-right: -65px;
     }
@@ -676,6 +748,60 @@ a {
 
 .row--gutters-large > div {
         padding-right: 100px;
+    }
+
+.row--gutters-small {
+        margin-right: -45px;
+    }
+
+.row--gutters-small > div {
+        padding-right: 45px;
+    }
+
+@media (min-width: 530px) {
+
+        .row__small-4 {
+            float: left;
+            width: calc(100% / 3);
+        }
+        
+        .row__small-4-larger {
+            width: 37%;
+        }
+        
+        .row__small-6 {
+            float: left;
+            width: 50%;
+        }
+
+        .row__small-7 {
+            float: left;
+            width: calc(100% * (7/12));
+        }
+
+        .row__small-8 {
+            float: left;
+            width: calc(100% * (8/12));
+        }
+
+        .row__small-8-smaller {
+            width: 63%;
+        }
+
+        .row__small-9 {
+            float: left;
+            width: calc(100% * (9/12));
+        }
+
+        .row__small-10 {
+            float: left;
+            width: calc(100% * (10/12));
+        }
+
+        .row__small-11 {
+            float: left;
+            width: calc(100% * (11/12));
+        }
     }
 
 @media (min-width: 800px) {
@@ -694,14 +820,128 @@ a {
             width: 50%;
         }
 
+        .row__medium-7 {
+            float: left;
+            width: calc(100% * (7/12));
+        }
+
         .row__medium-8 {
             float: left;
             width: calc(100% * (8/12));
         }
-        
+
         .row__medium-8-smaller {
             width: 63%;
         }
+
+        .row__medium-9 {
+            float: left;
+            width: calc(100% * (9/12));
+        }
+
+        .row__medium-10 {
+            float: left;
+            width: calc(100% * (10/12));
+        }
+
+        .row__medium-11 {
+            float: left;
+            width: calc(100% * (11/12));
+        }
+    }
+
+@media (min-width: 1010px) {
+
+        .row__large-4 {
+            float: left;
+            width: calc(100% / 3);
+        }
+        
+        .row__large-4-larger {
+            width: 37%;
+        }
+        
+        .row__large-6 {
+            float: left;
+            width: 50%;
+        }
+
+        .row__large-8 {
+            float: left;
+            width: calc(100% * (8/12));
+        }
+        
+        .row__large-8-smaller {
+            width: 63%;
+        }
+    }
+
+@media (min-width: 530px) {
+
+.row__small--centered {
+            float: none;
+            margin-left: auto;
+            margin-right: auto
+    }
+    }
+
+@media (min-width: 1010px) {
+
+.row__small--centered {
+            float: left;
+            margin-left: 0;
+            margin-right: 0
+    }
+    }
+
+@media (min-width: 800px) {
+
+.row__medium--centered {
+            float: none;
+            margin-left: auto;
+            margin-right: auto
+    }
+    }
+
+@media (min-width: 1010px) {
+
+.row__medium--centered {
+            float: left;
+            margin-left: 0;
+            margin-right: 0
+    }
+    }
+
+@media (min-width: 800px) {
+
+.row--equal-height-at-medium {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex
+    }
+
+            .row--equal-height-at-medium > div {
+                float: none;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+            }
+    }
+
+@media (min-width: 1010px) {
+
+.row--equal-height-at-large {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex
+    }
+
+            .row--equal-height-at-large > div {
+                float: none;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+            }
     }
 
 .generic-content-container p {
@@ -809,14 +1049,21 @@ a {
 
 .testimonial-item {
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 0 1.8125rem 1px 1.8125rem;
-    margin-top: 100px;
+    padding: 0 18px 1px 18px;
+    margin-bottom: 98px;
 }
 
-@media (min-width: 530px) {
+/* margin-top: 100px;
+
+    @mixin atSmall {
+        margin-top: 80px;
+    } */
+
+@media (min-width: 1010px) {
 
 .testimonial-item {
-        margin-top: 80px
+        margin-bottom: 0px;
+        padding: 0 1.8125rem 1px 1.8125rem
 }
     }
 
@@ -845,4 +1092,15 @@ a {
         font-size: 0.9375rem;
         font-weight: 400;
         margin: 0.25rem 0 1rem 0;
+    }
+
+.testimonial-item--last {
+        margin-bottom: 98px;
+    }
+
+@media (min-width: 1010px) {
+
+.testimonial-item--last {
+            margin-bottom: 0px
+    }
     }

@@ -1,10 +1,16 @@
 .testimonial-item {
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 0 1.8125rem 1px 1.8125rem;
-    margin-top: 100px;
+    padding: 0 18px 1px 18px;
+    margin-bottom: 98px;
+    /* margin-top: 100px;
 
     @mixin atSmall {
         margin-top: 80px;
+    } */
+
+    @mixin atLarge {
+        margin-bottom: 0px;
+        padding: 0 1.8125rem 1px 1.8125rem;        
     }
     
     &__image {
@@ -32,5 +38,13 @@
         font-size: 0.9375rem;
         font-weight: 400;
         margin: 0.25rem 0 1rem 0;
+    }
+
+    &--last {
+        margin-bottom: 98px;
+        
+        @mixin atLarge {
+            margin-bottom: 0px;
+        }
     }
 }
