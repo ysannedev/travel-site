@@ -9,31 +9,43 @@
   <link rel="stylesheet" href="dist/css/styles.css">
 </head>
 <body>
-  <header>
-    <img src="assets/icons/clear-view-escapes.svg">
-    <a class="btn" href="#">Get in Touch</a>
-    <nav>
-      <ul>
-        <li><a href="#our-beginning">Our Beginning</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="wrapper">
+      <!-- <img class="site-header__logo" src="assets/icons/clear-view-escapes.svg"> -->
+      <div class="site-header__logo">
+        <div class="site-header__logo__graphic site-header__logo__graphic--fix-b-of-graphic icon icon--clear-view-escapes">Clear View Escapes</div>
+      </div>
+      <div class="site-header__menu-icon">
+        <div class="site-header__menu-icon__middle"></div>
+      </div>
+      <div class="site-header__menu-content">
+        <div class="site-header__btn-container">
+          <a class="btn" href="#">Get in Touch</a>
+        </div>
+        <nav class="primary-nav primary-nav--pull-right">
+          <ul>
+            <li><a href="#our-beginning">Our Beginning</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </header>
 
   <div class="large-hero">
     <!-- <img src="assets/images/hero--large.jpg"> -->
     <picture>
-      <source srcset="assets/images/hero/hero--large-i.jpg 1920w, assets/images/hero/hero--large-hi-dpi-i.jpg 3840w" media="(min-width: 1380px)">
-      <source srcset="assets/images/hero/hero--medium-i.jpg 1380w, assets/images/hero/hero--medium-hi-dpi-i.jpg 2760w" media="(min-width: 990px)">
-      <source srcset="assets/images/hero/hero--small-i.jpg 990w, assets/images/hero/hero--small-hi-dpi-i.jpg 1980w" media="(min-width: 640px)">
-      <img srcset="assets/images/hero/hero--smaller-i.jpg 640w, assets/images/hero/hero--smaller-hi-dpi-i.jpg 1280w" alt="hero image" class="large-hero__image">
+      <source srcset="assets/images/hero/hero--large.jpg 1920w, assets/images/hero/hero--large-hi-dpi.jpg 3840w" media="(min-width: 1380px)">
+      <source srcset="assets/images/hero/hero--medium.jpg 1380w, assets/images/hero/hero--medium-hi-dpi.jpg 2760w" media="(min-width: 990px)">
+      <source srcset="assets/images/hero/hero--small.jpg 990w, assets/images/hero/hero--small-hi-dpi.jpg 1980w" media="(min-width: 640px)">
+      <img srcset="assets/images/hero/hero--smaller.jpg 640w, assets/images/hero/hero--smaller-hi-dpi.jpg 1280w" alt="hero image" class="large-hero__image">
     </picture>
     <!-- <img alt="hero image" 
-      srcset="assets/images/hero--smaller-i.jpg 640w, assets/images/hero--smaller-hi-dpi-i.jpg 1280w,
-        assets/images/hero--small-i.jpg 990w, assets/images/hero--small-hi-dpi-i.jpg 1980w,
-        assets/images/hero--medium-i.jpg 1380w, assets/images/hero--medium-hi-dpi-i.jpg 2760w,
-        assets/images/hero--large-i.jpg 1920w, assets/images/hero--large-hi-dpi-i.jpg 3840w"> -->
+      srcset="assets/images/hero--smaller.jpg 640w, assets/images/hero--smaller-hi-dpi.jpg 1280w,
+        assets/images/hero--small.jpg 990w, assets/images/hero--small-hi-dpi.jpg 1980w,
+        assets/images/hero--medium.jpg 1380w, assets/images/hero--medium-hi-dpi.jpg 2760w,
+        assets/images/hero--large.jpg 1920w, assets/images/hero--large-hi-dpi.jpg 3840w"> -->
     <div class="large-hero__text-content">
       <div class="wrapper">
         <h1 class="large-hero__title">Your clarity.</h1>
@@ -50,17 +62,17 @@
       <h3 class="headline headline--centered headline--orange headline--small headline--narrow headline--light">Ever since, we&rsquo;ve been working to make travel <strong>better for everyone.</strong></h3>
       <div class="wrapper wrapper--medium wrapper--b-margin">
         <!-- <picture>
-          <source media="(min-width: 970px)" srcset="assets/images/first-trip/first-trip-i.jpg 976w, assets/images/first-trip/first-trip-i.jpg 1952w">
-          <img src="assets/images/first-trip/first-trip-low-res-i.jpg" alt="Couple walking down a street.">
+          <source media="(min-width: 970px)" srcset="assets/images/first-trip/first-trip.jpg 976w, assets/images/first-trip/first-trip.jpg 1952w">
+          <img src="assets/images/first-trip/first-trip-low-res.jpg" alt="Couple walking down a street.">
         </picture> -->
-        <img sizes="(min-width: 970px) 976w, 100vw" srcset="assets/images/first-trip/first-trip-low-res-i.jpg 565w, assets/images/first-trip/first-trip-i.jpg 976w, assets/images/first-trip/first-trip-hi-dpi-i.jpg 1952w" alt="Couple walking down a street.">
+        <img sizes="(min-width: 970px) 976w, 100vw" srcset="assets/images/first-trip/first-trip-low-res.jpg 565w, assets/images/first-trip/first-trip.jpg 976w, assets/images/first-trip/first-trip-hi-dpi.jpg 1952w" alt="Couple walking down a street.">
       </div>
       <div class="row row--gutters">
         <div class="row__medium-4 row__medium-4-larger">
           <picture>
-            <source size="404px" srcset="assets/images/our-start/our-start-i.jpg 404w, assets/images/our-start/our-start-hi-dpi-i.jpg 808w" media="(min-width: 1020px)">
-            <source size="320px" srcset="assets/images/our-start/our-start-portrait-i.jpg 382w, assets/images/our-start/our-start-portrait-hi-dpi-i.jpg 764w" media="(min-width: 800px)">
-            <img srcset="assets/images/our-start/our-start-landscape-i.jpg 800w, assets/images/our-start/our-start-landscape-hi-dpi-i.jpg 1600w" alt="Our founder, Jane Doe">
+            <source size="404px" srcset="assets/images/our-start/our-start.jpg 404w, assets/images/our-start/our-start-hi-dpi.jpg 808w" media="(min-width: 1020px)">
+            <source size="320px" srcset="assets/images/our-start/our-start-portrait.jpg 382w, assets/images/our-start/our-start-portrait-hi-dpi.jpg 764w" media="(min-width: 800px)">
+            <img srcset="assets/images/our-start/our-start-landscape.jpg 800w, assets/images/our-start/our-start-landscape-hi-dpi.jpg 1600w" alt="Our founder, Jane Doe">
           </picture>
         </div>
         <div class="row__medium-8 row__medium-8-smaller">
@@ -146,7 +158,7 @@
         <div class="row__small-10 row__medium-9 row__large-4 row__small--centered">
           <div class="testimonial-item testimonial-item--last">
             <div class="testimonial-item__image">
-              <img sizes="160px" srcset="assets/images/testimonial/testimonial-cat-i.jpg 160w, assets/images/testimonial/testimonial-cat-hi-dpi-i.jpg 320w" alt="Cat McKitty">
+              <img sizes="160px" srcset="assets/images/testimonial/testimonial-cat.jpg 160w, assets/images/testimonial/testimonial-cat-hi-dpi.jpg 320w" alt="Cat McKitty">
             </div>
             <h3 class="testimonial-item__title">Cat McKitty</h3>
             <h4 class="testimonial-item__subtitle">6 Time Escaper</h4>
@@ -162,10 +174,13 @@
   <footer class="site-footer">
     <div class="wrapper">
       <p>
-        <span class="footer__text">Copyright &copy; 2016 Clear View Escapes. All rights reserved.</span>
+        <span class="site-footer__text">Copyright &copy; 2016 Clear View Escapes. All rights reserved.</span>
         <a class="btn btn--orange" href="#">Get in Touch</a>
       </p>
     </div>
   </footer>
+
+  <script src="dist/js/app.bundle.js"></script>
+
 </body>
 </html>
