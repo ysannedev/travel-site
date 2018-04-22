@@ -11,6 +11,16 @@
         font-weight: 500;
     }
 
+    &--blue {
+        color: $blue;
+    }
+
+    &--bolder {
+        strong {
+            font-weight: 700;
+        }    
+    }
+
     &__icon {
         display: block;
         margin-left: auto;
@@ -18,6 +28,8 @@
         margin-bottom: 0.6rem;
 
         @mixin atSmall {
+            position: relative;
+            top: 8px;
             margin-right: 1rem;
             margin-left: 0;
             margin-bottom: 0;
