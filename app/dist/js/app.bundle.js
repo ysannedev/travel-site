@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9897,197 +9897,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	return jQuery;
 });
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _MobileMenu = __webpack_require__(2);
-
-var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
-
-var _RevealOnScroll = __webpack_require__(4);
-
-var _RevealOnScroll2 = _interopRequireDefault(_RevealOnScroll);
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var mobileMenu = new _MobileMenu2.default(); // import Person from './modules/Person';
-// // var Person = require('./modules/Person');
-
-// class Adult extends Person {
-//     payTaxes() {
-//         console.log(this.name + ' owes taxes.');
-//     }
-// }
-
-// var john = new Person('John Doe', 'blue');
-// var jane = new Adult('Jane Smith', 'green');
-
-// john.greet();
-// jane.greet();
-// jane.payTaxes();
-
-var featureItemsEffect = new _RevealOnScroll2.default((0, _jquery2.default)('.feature-item'), '85%');
-var testimonialItemsEffect = new _RevealOnScroll2.default((0, _jquery2.default)('.testimonial-item'), '60%');
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var MobileMenu = function () {
-    function MobileMenu() {
-        _classCallCheck(this, MobileMenu);
-
-        this.siteHeader = (0, _jquery2.default)('.site-header');
-        this.menuIcon = (0, _jquery2.default)('.site-header__menu-icon');
-        this.menuContent = (0, _jquery2.default)('.site-header__menu-content');
-        this.events();
-    }
-
-    _createClass(MobileMenu, [{
-        key: 'events',
-        value: function events() {
-            this.menuIcon.click(this.toggleTheMenu.bind(this));
-        }
-    }, {
-        key: 'toggleTheMenu',
-        value: function toggleTheMenu() {
-            console.log('clicked');
-            this.menuContent.toggleClass('site-header__menu-content--is-visible');
-            this.siteHeader.toggleClass('site-header--is-expanded');
-            this.menuIcon.toggleClass('site-header__menu-icon--close-x');
-        }
-    }]);
-
-    return MobileMenu;
-}();
-
-exports.default = MobileMenu;
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = function (module) {
-	if (!module.webpackPolyfill) {
-		module.deprecate = function () {};
-		module.paths = [];
-		// module.parent = undefined by default
-		if (!module.children) module.children = [];
-		Object.defineProperty(module, "loaded", {
-			enumerable: true,
-			get: function get() {
-				return module.l;
-			}
-		});
-		Object.defineProperty(module, "id", {
-			enumerable: true,
-			get: function get() {
-				return module.i;
-			}
-		});
-		module.webpackPolyfill = 1;
-	}
-	return module;
-};
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-// import Waypoint from '../../../node_modules/waypoints/lib/noframework.waypoints';
-
-
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-var _noframeworkWaypoints = __webpack_require__(5);
-
-var _noframeworkWaypoints2 = _interopRequireDefault(_noframeworkWaypoints);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var RevealOnScroll = function () {
-    function RevealOnScroll(elems, offset) {
-        _classCallCheck(this, RevealOnScroll);
-
-        this.itemsToReveal = elems;
-        this.offsetPercentage = offset;
-        this.hideInitially();
-        this.createWaypoints();
-    }
-
-    _createClass(RevealOnScroll, [{
-        key: 'hideInitially',
-        value: function hideInitially() {
-            this.itemsToReveal.addClass('reveal-item');
-        }
-    }, {
-        key: 'createWaypoints',
-        value: function createWaypoints() {
-            var that = this;
-            this.itemsToReveal.each(function () {
-                var currentItem = this;
-                new Waypoint({
-                    element: currentItem,
-                    handler: function handler() {
-                        (0, _jquery2.default)(currentItem).addClass('reveal-item--is-visible');
-                    },
-                    offset: that.offsetPercentage
-                });
-            });
-        }
-    }]);
-
-    return RevealOnScroll;
-}();
-
-;
-
-exports.default = RevealOnScroll;
-
-/***/ }),
-/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10338,6 +10151,669 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     }return !0;
   }, n.adapters.push({ name: "noframework", Adapter: i }), n.Adapter = i;
 }();
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _MobileMenu = __webpack_require__(3);
+
+var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
+
+var _RevealOnScroll = __webpack_require__(5);
+
+var _RevealOnScroll2 = _interopRequireDefault(_RevealOnScroll);
+
+var _StickyHeader = __webpack_require__(6);
+
+var _StickyHeader2 = _interopRequireDefault(_StickyHeader);
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// import Person from './modules/Person';
+// // var Person = require('./modules/Person');
+
+// class Adult extends Person {
+//     payTaxes() {
+//         console.log(this.name + ' owes taxes.');
+//     }
+// }
+
+// var john = new Person('John Doe', 'blue');
+// var jane = new Adult('Jane Smith', 'green');
+
+// john.greet();
+// jane.greet();
+// jane.payTaxes();
+
+var mobileMenu = new _MobileMenu2.default();
+var stickyHeader = new _StickyHeader2.default();
+var featureItemsEffect = new _RevealOnScroll2.default((0, _jquery2.default)('.feature-item'), '85%');
+var testimonialItemsEffect = new _RevealOnScroll2.default((0, _jquery2.default)('.testimonial-item'), '60%');
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var MobileMenu = function () {
+    function MobileMenu() {
+        _classCallCheck(this, MobileMenu);
+
+        this.siteHeader = (0, _jquery2.default)('.site-header');
+        this.menuIcon = (0, _jquery2.default)('.site-header__menu-icon');
+        this.menuContent = (0, _jquery2.default)('.site-header__menu-content');
+        this.events();
+    }
+
+    _createClass(MobileMenu, [{
+        key: 'events',
+        value: function events() {
+            this.menuIcon.click(this.toggleTheMenu.bind(this));
+        }
+    }, {
+        key: 'toggleTheMenu',
+        value: function toggleTheMenu() {
+            console.log('clicked');
+            this.menuContent.toggleClass('site-header__menu-content--is-visible');
+            this.siteHeader.toggleClass('site-header--is-expanded');
+            this.menuIcon.toggleClass('site-header__menu-icon--close-x');
+        }
+    }]);
+
+    return MobileMenu;
+}();
+
+exports.default = MobileMenu;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = function (module) {
+	if (!module.webpackPolyfill) {
+		module.deprecate = function () {};
+		module.paths = [];
+		// module.parent = undefined by default
+		if (!module.children) module.children = [];
+		Object.defineProperty(module, "loaded", {
+			enumerable: true,
+			get: function get() {
+				return module.l;
+			}
+		});
+		Object.defineProperty(module, "id", {
+			enumerable: true,
+			get: function get() {
+				return module.i;
+			}
+		});
+		module.webpackPolyfill = 1;
+	}
+	return module;
+};
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+// import Waypoint from '../../../node_modules/waypoints/lib/noframework.waypoints';
+
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _noframeworkWaypoints = __webpack_require__(1);
+
+var _noframeworkWaypoints2 = _interopRequireDefault(_noframeworkWaypoints);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var RevealOnScroll = function () {
+    function RevealOnScroll(elems, offset) {
+        _classCallCheck(this, RevealOnScroll);
+
+        this.itemsToReveal = elems;
+        this.offsetPercentage = offset;
+        this.hideInitially();
+        this.createWaypoints();
+    }
+
+    _createClass(RevealOnScroll, [{
+        key: 'hideInitially',
+        value: function hideInitially() {
+            this.itemsToReveal.addClass('reveal-item');
+        }
+    }, {
+        key: 'createWaypoints',
+        value: function createWaypoints() {
+            var that = this;
+            this.itemsToReveal.each(function () {
+                var currentItem = this;
+                new Waypoint({
+                    element: currentItem,
+                    handler: function handler() {
+                        (0, _jquery2.default)(currentItem).addClass('reveal-item--is-visible');
+                    },
+                    offset: that.offsetPercentage
+                });
+            });
+        }
+    }]);
+
+    return RevealOnScroll;
+}();
+
+;
+
+exports.default = RevealOnScroll;
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _noframeworkWaypoints = __webpack_require__(1);
+
+var _noframeworkWaypoints2 = _interopRequireDefault(_noframeworkWaypoints);
+
+var _jquerySmoothScroll = __webpack_require__(7);
+
+var _jquerySmoothScroll2 = _interopRequireDefault(_jquerySmoothScroll);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var StickyHeader = function () {
+    function StickyHeader() {
+        _classCallCheck(this, StickyHeader);
+
+        this.siteHeader = (0, _jquery2.default)('.site-header');
+        this.siteHeaderLinks = (0, _jquery2.default)('.primary-nav a');
+        this.pageSections = (0, _jquery2.default)('.page-section');
+        this.waypointTrigger = (0, _jquery2.default)('.large-hero__title')[0];
+        this.createHeaderWaypoint();
+        this.highlightHeaderLinks();
+        this.smoothScrollEffect();
+    }
+
+    _createClass(StickyHeader, [{
+        key: 'smoothScrollEffect',
+        value: function smoothScrollEffect() {
+            this.siteHeaderLinks.smoothScroll();
+        }
+    }, {
+        key: 'createHeaderWaypoint',
+        value: function createHeaderWaypoint() {
+            var that = this;
+            new Waypoint({
+                element: that.waypointTrigger,
+                handler: function handler(direction) {
+                    if (direction === 'down') {
+                        that.siteHeader.addClass('site-header--dark');
+                    } else {
+                        that.siteHeader.removeClass('site-header--dark');
+                    }
+                }
+            });
+        }
+    }, {
+        key: 'highlightHeaderLinks',
+        value: function highlightHeaderLinks() {
+            var that = this;
+            this.pageSections.each(function () {
+                var currentSection = this;
+
+                new Waypoint({
+                    element: currentSection,
+                    handler: function handler(direction) {
+                        if (direction === 'down') {
+                            var currentLink = (0, _jquery2.default)(currentSection).attr('data-matching-link');
+                            that.siteHeaderLinks.removeClass('is-current-link');
+                            (0, _jquery2.default)(currentLink).addClass('is-current-link');
+                        }
+                    },
+                    offset: '18%'
+                });
+
+                new Waypoint({
+                    element: currentSection.nextElementSibling,
+                    handler: function handler(direction) {
+                        if (direction === 'up') {
+                            // console.log('current:');
+                            // console.log(currentSection);
+                            // console.log('previous:');
+                            // console.log(currentSection.previousElementSibling);
+                            // console.log('next:');
+                            // console.log(currentSection.nextElementSibling);
+                            // console.log(' ');
+                            var currentLink = (0, _jquery2.default)(currentSection).attr('data-matching-link');
+                            that.siteHeaderLinks.removeClass('is-current-link');
+                            (0, _jquery2.default)(currentLink).addClass('is-current-link');
+                        }
+                    },
+                    offset: '60%'
+                });
+            });
+        }
+    }]);
+
+    return StickyHeader;
+}();
+
+exports.default = StickyHeader;
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+/*!
+ * jQuery Smooth Scroll - v2.2.0 - 2017-05-05
+ * https://github.com/kswedberg/jquery-smooth-scroll
+ * Copyright (c) 2017 Karl Swedberg
+ * Licensed MIT
+ */
+
+(function (factory) {
+  if (true) {
+    // AMD. Register as an anonymous module.
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(0)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else if ((typeof module === 'undefined' ? 'undefined' : _typeof(module)) === 'object' && module.exports) {
+    // CommonJS
+    factory(require('jquery'));
+  } else {
+    // Browser globals
+    factory(jQuery);
+  }
+})(function ($) {
+
+  var version = '2.2.0';
+  var optionOverrides = {};
+  var defaults = {
+    exclude: [],
+    excludeWithin: [],
+    offset: 0,
+
+    // one of 'top' or 'left'
+    direction: 'top',
+
+    // if set, bind click events through delegation
+    //  supported since jQuery 1.4.2
+    delegateSelector: null,
+
+    // jQuery set of elements you wish to scroll (for $.smoothScroll).
+    //  if null (default), $('html, body').firstScrollable() is used.
+    scrollElement: null,
+
+    // only use if you want to override default behavior
+    scrollTarget: null,
+
+    // automatically focus the target element after scrolling to it
+    autoFocus: false,
+
+    // fn(opts) function to be called before scrolling occurs.
+    // `this` is the element(s) being scrolled
+    beforeScroll: function beforeScroll() {},
+
+    // fn(opts) function to be called after scrolling occurs.
+    // `this` is the triggering element
+    afterScroll: function afterScroll() {},
+
+    // easing name. jQuery comes with "swing" and "linear." For others, you'll need an easing plugin
+    // from jQuery UI or elsewhere
+    easing: 'swing',
+
+    // speed can be a number or 'auto'
+    // if 'auto', the speed will be calculated based on the formula:
+    // (current scroll position - target scroll position) / autoCoeffic
+    speed: 400,
+
+    // coefficient for "auto" speed
+    autoCoefficient: 2,
+
+    // $.fn.smoothScroll only: whether to prevent the default click action
+    preventDefault: true
+  };
+
+  var getScrollable = function getScrollable(opts) {
+    var scrollable = [];
+    var scrolled = false;
+    var dir = opts.dir && opts.dir === 'left' ? 'scrollLeft' : 'scrollTop';
+
+    this.each(function () {
+      var el = $(this);
+
+      if (this === document || this === window) {
+        return;
+      }
+
+      if (document.scrollingElement && (this === document.documentElement || this === document.body)) {
+        scrollable.push(document.scrollingElement);
+
+        return false;
+      }
+
+      if (el[dir]() > 0) {
+        scrollable.push(this);
+      } else {
+        // if scroll(Top|Left) === 0, nudge the element 1px and see if it moves
+        el[dir](1);
+        scrolled = el[dir]() > 0;
+
+        if (scrolled) {
+          scrollable.push(this);
+        }
+        // then put it back, of course
+        el[dir](0);
+      }
+    });
+
+    if (!scrollable.length) {
+      this.each(function () {
+        // If no scrollable elements and <html> has scroll-behavior:smooth because
+        // "When this property is specified on the root element, it applies to the viewport instead."
+        // and "The scroll-behavior property of the … body element is *not* propagated to the viewport."
+        // → https://drafts.csswg.org/cssom-view/#propdef-scroll-behavior
+        if (this === document.documentElement && $(this).css('scrollBehavior') === 'smooth') {
+          scrollable = [this];
+        }
+
+        // If still no scrollable elements, fall back to <body>,
+        // if it's in the jQuery collection
+        // (doing this because Safari sets scrollTop async,
+        // so can't set it to 1 and immediately get the value.)
+        if (!scrollable.length && this.nodeName === 'BODY') {
+          scrollable = [this];
+        }
+      });
+    }
+
+    // Use the first scrollable element if we're calling firstScrollable()
+    if (opts.el === 'first' && scrollable.length > 1) {
+      scrollable = [scrollable[0]];
+    }
+
+    return scrollable;
+  };
+
+  var rRelative = /^([\-\+]=)(\d+)/;
+
+  $.fn.extend({
+    scrollable: function scrollable(dir) {
+      var scrl = getScrollable.call(this, { dir: dir });
+
+      return this.pushStack(scrl);
+    },
+    firstScrollable: function firstScrollable(dir) {
+      var scrl = getScrollable.call(this, { el: 'first', dir: dir });
+
+      return this.pushStack(scrl);
+    },
+
+    smoothScroll: function smoothScroll(options, extra) {
+      options = options || {};
+
+      if (options === 'options') {
+        if (!extra) {
+          return this.first().data('ssOpts');
+        }
+
+        return this.each(function () {
+          var $this = $(this);
+          var opts = $.extend($this.data('ssOpts') || {}, extra);
+
+          $(this).data('ssOpts', opts);
+        });
+      }
+
+      var opts = $.extend({}, $.fn.smoothScroll.defaults, options);
+
+      var clickHandler = function clickHandler(event) {
+        var escapeSelector = function escapeSelector(str) {
+          return str.replace(/(:|\.|\/)/g, '\\$1');
+        };
+
+        var link = this;
+        var $link = $(this);
+        var thisOpts = $.extend({}, opts, $link.data('ssOpts') || {});
+        var exclude = opts.exclude;
+        var excludeWithin = thisOpts.excludeWithin;
+        var elCounter = 0;
+        var ewlCounter = 0;
+        var include = true;
+        var clickOpts = {};
+        var locationPath = $.smoothScroll.filterPath(location.pathname);
+        var linkPath = $.smoothScroll.filterPath(link.pathname);
+        var hostMatch = location.hostname === link.hostname || !link.hostname;
+        var pathMatch = thisOpts.scrollTarget || linkPath === locationPath;
+        var thisHash = escapeSelector(link.hash);
+
+        if (thisHash && !$(thisHash).length) {
+          include = false;
+        }
+
+        if (!thisOpts.scrollTarget && (!hostMatch || !pathMatch || !thisHash)) {
+          include = false;
+        } else {
+          while (include && elCounter < exclude.length) {
+            if ($link.is(escapeSelector(exclude[elCounter++]))) {
+              include = false;
+            }
+          }
+
+          while (include && ewlCounter < excludeWithin.length) {
+            if ($link.closest(excludeWithin[ewlCounter++]).length) {
+              include = false;
+            }
+          }
+        }
+
+        if (include) {
+          if (thisOpts.preventDefault) {
+            event.preventDefault();
+          }
+
+          $.extend(clickOpts, thisOpts, {
+            scrollTarget: thisOpts.scrollTarget || thisHash,
+            link: link
+          });
+
+          $.smoothScroll(clickOpts);
+        }
+      };
+
+      if (options.delegateSelector !== null) {
+        this.off('click.smoothscroll', options.delegateSelector).on('click.smoothscroll', options.delegateSelector, clickHandler);
+      } else {
+        this.off('click.smoothscroll').on('click.smoothscroll', clickHandler);
+      }
+
+      return this;
+    }
+  });
+
+  var getExplicitOffset = function getExplicitOffset(val) {
+    var explicit = { relative: '' };
+    var parts = typeof val === 'string' && rRelative.exec(val);
+
+    if (typeof val === 'number') {
+      explicit.px = val;
+    } else if (parts) {
+      explicit.relative = parts[1];
+      explicit.px = parseFloat(parts[2]) || 0;
+    }
+
+    return explicit;
+  };
+
+  var onAfterScroll = function onAfterScroll(opts) {
+    var $tgt = $(opts.scrollTarget);
+
+    if (opts.autoFocus && $tgt.length) {
+      $tgt[0].focus();
+
+      if (!$tgt.is(document.activeElement)) {
+        $tgt.prop({ tabIndex: -1 });
+        $tgt[0].focus();
+      }
+    }
+
+    opts.afterScroll.call(opts.link, opts);
+  };
+
+  $.smoothScroll = function (options, px) {
+    if (options === 'options' && (typeof px === 'undefined' ? 'undefined' : _typeof(px)) === 'object') {
+      return $.extend(optionOverrides, px);
+    }
+    var opts, $scroller, speed, delta;
+    var explicitOffset = getExplicitOffset(options);
+    var scrollTargetOffset = {};
+    var scrollerOffset = 0;
+    var offPos = 'offset';
+    var scrollDir = 'scrollTop';
+    var aniProps = {};
+    var aniOpts = {};
+
+    if (explicitOffset.px) {
+      opts = $.extend({ link: null }, $.fn.smoothScroll.defaults, optionOverrides);
+    } else {
+      opts = $.extend({ link: null }, $.fn.smoothScroll.defaults, options || {}, optionOverrides);
+
+      if (opts.scrollElement) {
+        offPos = 'position';
+
+        if (opts.scrollElement.css('position') === 'static') {
+          opts.scrollElement.css('position', 'relative');
+        }
+      }
+
+      if (px) {
+        explicitOffset = getExplicitOffset(px);
+      }
+    }
+
+    scrollDir = opts.direction === 'left' ? 'scrollLeft' : scrollDir;
+
+    if (opts.scrollElement) {
+      $scroller = opts.scrollElement;
+
+      if (!explicitOffset.px && !/^(?:HTML|BODY)$/.test($scroller[0].nodeName)) {
+        scrollerOffset = $scroller[scrollDir]();
+      }
+    } else {
+      $scroller = $('html, body').firstScrollable(opts.direction);
+    }
+
+    // beforeScroll callback function must fire before calculating offset
+    opts.beforeScroll.call($scroller, opts);
+
+    scrollTargetOffset = explicitOffset.px ? explicitOffset : {
+      relative: '',
+      px: $(opts.scrollTarget)[offPos]() && $(opts.scrollTarget)[offPos]()[opts.direction] || 0
+    };
+
+    aniProps[scrollDir] = scrollTargetOffset.relative + (scrollTargetOffset.px + scrollerOffset + opts.offset);
+
+    speed = opts.speed;
+
+    // automatically calculate the speed of the scroll based on distance / coefficient
+    if (speed === 'auto') {
+
+      // $scroller[scrollDir]() is position before scroll, aniProps[scrollDir] is position after
+      // When delta is greater, speed will be greater.
+      delta = Math.abs(aniProps[scrollDir] - $scroller[scrollDir]());
+
+      // Divide the delta by the coefficient
+      speed = delta / opts.autoCoefficient;
+    }
+
+    aniOpts = {
+      duration: speed,
+      easing: opts.easing,
+      complete: function complete() {
+        onAfterScroll(opts);
+      }
+    };
+
+    if (opts.step) {
+      aniOpts.step = opts.step;
+    }
+
+    if ($scroller.length) {
+      $scroller.stop().animate(aniProps, aniOpts);
+    } else {
+      onAfterScroll(opts);
+    }
+  };
+
+  $.smoothScroll.version = version;
+  $.smoothScroll.filterPath = function (string) {
+    string = string || '';
+
+    return string.replace(/^\//, '').replace(/(?:index|default).[a-zA-Z]{3,4}$/, '').replace(/\/$/, '');
+  };
+
+  // default options
+  $.fn.smoothScroll.defaults = defaults;
+});
 
 /***/ })
 /******/ ]);

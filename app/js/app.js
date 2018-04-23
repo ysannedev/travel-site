@@ -16,8 +16,10 @@
 
 import MobileMenu from './modules/MobileMenu';
 import RevealOnScroll from './modules/RevealOnScroll';
+import StickyHeader from './modules/StickyHeader';
 import $ from 'jquery';
 
 var mobileMenu = new MobileMenu();
+var stickyHeader = new StickyHeader();
 var featureItemsEffect = new RevealOnScroll($('.feature-item'), '85%');
 var testimonialItemsEffect = new RevealOnScroll($('.testimonial-item'), '60%');

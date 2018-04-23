@@ -11,11 +11,11 @@ module.exports = {
         loaders: [ /* loaders are used for transforming */
             {
                 test: /\.js$/, /* condition for file transformation */
+                exclude: '/node_modules/', /* prevents transforming js files in node_modules */
                 loader: 'babel-loader', /* transforming package */
                 query: {
                     presets: ['es2015'] /* ES6 preset. rewrites js files to ES5 that many browsers support */
-                },
-                exclude: '/node_modules/' /* prevents transforming js files in node_modules */
+                }
             }
         ]
     }
