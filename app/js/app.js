@@ -15,5 +15,9 @@
 // jane.payTaxes();
 
 import MobileMenu from './modules/MobileMenu';
+import RevealOnScroll from './modules/RevealOnScroll';
+import $ from 'jquery';
 
 var mobileMenu = new MobileMenu();
+var featureItemsEffect = new RevealOnScroll($('.feature-item'), '85%');
+var testimonialItemsEffect = new RevealOnScroll($('.testimonial-item'), '60%');
