@@ -37,3 +37,5 @@ gulp.task('cssInject', ['styles'], function() { /* update browserSync after css 
 gulp.task('scriptsRefresh', ['scripts'], function() { /* update browserSync after js files finished compiling */
     browserSync.reload();
 });
+
+gulp.task('default', ['watch']);
