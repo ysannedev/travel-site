@@ -1,5 +1,5 @@
 .site-header {
-    position: absolute;
+    position: fixed;
     z-index: 20;
     width: 100%;    
     padding: 10px 0;
@@ -7,6 +7,10 @@
     
     @mixin atMedium {
         background-color: rgba($blue, 0.3);
+
+        &--dark {
+            background-color: rgba($blueDark, 0.85);
+        }
     }
 
     &--is-expanded {
@@ -30,10 +34,15 @@
         transform-origin: 50% 0%;
         background-color: $blue;
         padding: 25px 36px;
+        transition: transform .3s ease-out;
 
         @mixin atMedium {
             left: auto;
             transform: translateX(0) scale(1);
+
+            .site-header--dark & {
+                transform: scale(.565);
+            }
         }
     }
 
