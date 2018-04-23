@@ -1,4 +1,4 @@
-var gulp = require('gulp'),
+var gulp = require('gulp'), /* require method is provided by Node */
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
     nested = require('postcss-nested'),
@@ -10,10 +10,10 @@ var gulp = require('gulp'),
 gulp.task('styles', function() {
     // console.log('styles task called');
     return gulp.src('./app/css/styles.css')
-        .pipe(postcss([cssImport, mixins, cssvars, nested, rgba, autoprefixer]))
+        .pipe(postcss([cssImport, mixins, cssvars, nested, rgba, autoprefixer])) /* list plugins you need from postcss */
         .on('error', function(err) {
             console.log(err.toString());
-            this.emit('end');
+            this.emit('end'); /* lets gulp continue to next pipe */
         })
         .pipe(gulp.dest('./app/dist/css'));
 });

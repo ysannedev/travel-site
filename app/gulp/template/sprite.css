@@ -1,14 +1,14 @@
 /* 
     DONT edit app/css/modules/_sprite.css (bc it is generated automatically by Gulp), instead edit app/gulp/template/sprite.css
 */
- {{#shapes}}
-    {{#first}}
+ {{#shapes}} /* loops through icons in assets folder */
+    {{#first}} /* only outputs once in loop */
         .icon {
             background-image: url('/assets/sprite/{{{sprite}}}');
         }
     {{/first}}
 
-    .icon--{{base}} {
+    .icon--{{base}} { /* creates .icon--FILENAME class based on FILENAME */
         width: {{width.outer}}px;
         height: {{height.outer}}px;
         background-position: {{position.relative.xy}};
