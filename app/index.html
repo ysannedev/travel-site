@@ -7,6 +7,7 @@
   <meta name="keywords" content="Travel planning, travel bundles, travel escapes, affordable destinations">
   <meta name="description" content="Your clarity. One trip away. We create soul restoring journeys that inspire you to be you.">
   <link rel="stylesheet" href="dist/css/styles.css">
+  <script src="dist/js/Vendor.js"></script>
 </head>
 <body>
   <header class="site-header">
@@ -65,14 +66,14 @@
           <source media="(min-width: 970px)" srcset="assets/images/first-trip/first-trip.jpg 976w, assets/images/first-trip/first-trip.jpg 1952w">
           <img src="assets/images/first-trip/first-trip-low-res.jpg" alt="Couple walking down a street.">
         </picture> -->
-        <img sizes="(min-width: 970px) 976w, 100vw" srcset="assets/images/first-trip/first-trip-low-res.jpg 565w, assets/images/first-trip/first-trip.jpg 976w, assets/images/first-trip/first-trip-hi-dpi.jpg 1952w" alt="Couple walking down a street.">
+        <img sizes="(min-width: 970px) 976w, 100vw" class="lazyload" data-srcset="assets/images/first-trip/first-trip-low-res.jpg 565w, assets/images/first-trip/first-trip.jpg 976w, assets/images/first-trip/first-trip-hi-dpi.jpg 1952w" alt="Couple walking down a street.">
       </div>
       <div class="row row--gutters">
         <div class="row__medium-4 row__medium-4-larger">
           <picture>
-            <source size="404px" srcset="assets/images/our-start/our-start.jpg 404w, assets/images/our-start/our-start-hi-dpi.jpg 808w" media="(min-width: 1020px)">
-            <source size="320px" srcset="assets/images/our-start/our-start-portrait.jpg 382w, assets/images/our-start/our-start-portrait-hi-dpi.jpg 764w" media="(min-width: 800px)">
-            <img srcset="assets/images/our-start/our-start-landscape.jpg 800w, assets/images/our-start/our-start-landscape-hi-dpi.jpg 1600w" alt="Our founder, Jane Doe">
+            <source size="404px" data-srcset="assets/images/our-start/our-start.jpg 404w, assets/images/our-start/our-start-hi-dpi.jpg 808w" media="(min-width: 1020px)">
+            <source size="320px" data-srcset="assets/images/our-start/our-start-portrait.jpg 382w, assets/images/our-start/our-start-portrait-hi-dpi.jpg 764w" media="(min-width: 800px)">
+            <img class="lazyload" data-srcset="assets/images/our-start/our-start-landscape.jpg 800w, assets/images/our-start/our-start-landscape-hi-dpi.jpg 1600w" alt="Our founder, Jane Doe">
           </picture>
         </div>
         <div class="row__medium-8 row__medium-8-smaller">
@@ -126,7 +127,7 @@
     </div>
   </div>
 
-  <div id="testimonials" class="page-section page-section--no-b-padding-until-large page-section--testimonials" data-matching-link="#testimonials-link">
+  <div id="testimonials" class="page-section page-section--no-b-padding-until-large page-section--testimonials lazyload" data-matching-link="#testimonials-link">
     <div class="wrapper wrapper--no-padding-until-medium">
       <!-- <h2 class="section-title section-title--blue section-title--bolder"><img class="section-title__icon" src="assets/icons/comment.svg">Real <strong>Testimonials</strong></h2> -->
       <h2 class="section-title section-title--blue section-title--bolder"><span class="icon section-title__icon icon--comment"></span>Real <strong>Testimonials</strong></h2>
@@ -136,7 +137,7 @@
         <div class="row__small-10 row__medium-9 row__large-4 row__small--centered">
           <div class="testimonial-item">
             <div class="testimonial-item__image">
-              <img size="160px" srcset="assets/images/testimonial/testimonial-jane.jpg 160w, assets/images/testimonial/testimonial-jane-hi-dpi.jpg 320w" alt="Jane Doe">
+              <img size="160px" class="lazyload" data-srcset="assets/images/testimonial/testimonial-jane.jpg 160w, assets/images/testimonial/testimonial-jane-hi-dpi.jpg 320w" alt="Jane Doe">
             </div>
             <h3 class="testimonial-item__title">Jane Doe</h3>
             <h4 class="testimonial-item__subtitle">9 Time Escaper</h4>
@@ -147,7 +148,7 @@
         <div class="row__small-10 row__medium-9 row__large-4 row__small--centered">
           <div class="testimonial-item">
             <div class="testimonial-item__image">
-              <img sizes="160px" srcset="assets/images/testimonial/testimonial-john.jpg 160w, assets/images/testimonial/testimonial-john-hi-dpi.jpg 320w" alt="John Smith">
+              <img sizes="160px" class="lazyload" data-srcset="assets/images/testimonial/testimonial-john.jpg 160w, assets/images/testimonial/testimonial-john-hi-dpi.jpg 320w" alt="John Smith">
             </div>
             <h3 class="testimonial-item__title">John Smith</h3>
             <h4 class="testimonial-item__subtitle">4 Time Escaper</h4>
@@ -158,7 +159,7 @@
         <div class="row__small-10 row__medium-9 row__large-4 row__small--centered">
           <div class="testimonial-item testimonial-item--last">
             <div class="testimonial-item__image">
-              <img sizes="160px" srcset="assets/images/testimonial/testimonial-cat.jpg 160w, assets/images/testimonial/testimonial-cat-hi-dpi.jpg 320w" alt="Cat McKitty">
+              <img sizes="160px" class="lazyload" data-srcset="assets/images/testimonial/testimonial-cat.jpg 160w, assets/images/testimonial/testimonial-cat-hi-dpi.jpg 320w" alt="Cat McKitty">
             </div>
             <h3 class="testimonial-item__title">Cat McKitty</h3>
             <h4 class="testimonial-item__subtitle">6 Time Escaper</h4>
@@ -196,7 +197,7 @@
     <div class="modal__close">X</div>
   </div>  
 
-  <script src="dist/js/app.bundle.js"></script>
+  <script src="dist/js/App.js"></script>
 
 </body>
 </html>
