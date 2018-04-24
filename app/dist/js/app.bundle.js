@@ -10855,11 +10855,11 @@ var Modal = function () {
         value: function events() {
             this.openModalBtn.click(this.openModal.bind(this));
             this.closeModalBtn.click(this.closeModal.bind(this));
-            (0, _jquery2.default)(document).keyup(this.keyPressHandler);
+            (0, _jquery2.default)(document).keyup(this.keyPressHandler.bind(this));
         }
     }, {
         key: 'keyPressHandler',
-        value: function keyPressHandler() {
+        value: function keyPressHandler(e) {
             if (e.keyCode == 27) {
                 this.closeModal();
             }

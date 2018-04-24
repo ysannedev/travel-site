@@ -1323,8 +1323,9 @@ a {
         right: 10px;
         height: 19px;
         width: 20px;
-        background-color: rgba(0,0,0,0.2);
+        /* background-color: rgba(0,0,0,0.2); */
         z-index: 10;
+        cursor: pointer;
     }
 
 .site-header__menu-icon::before {
