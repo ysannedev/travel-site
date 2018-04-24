@@ -670,11 +670,10 @@ a {
     }
 
 @media (min-width: 1010px) {
-
-.page-section--testimonials {
-            background: url('/assets/images/testimonial/testimonials-bg.jpg') top center;
-            background-size: cover
-    }
+            .page-section--testimonials.lazyloaded {
+                background: url('/assets/images/testimonial/testimonials-bg.jpg') top center;
+                background-size: cover;
+            }
     }
 
 .page-section--no-b-padding-until-medium {

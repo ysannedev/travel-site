@@ -13,8 +13,10 @@
     &--testimonials {
         background-color: $testimonial-bg;
         @mixin atLarge {
-            background: url('/assets/images/testimonial/testimonials-bg.jpg') top center;
-            background-size: cover;
+            &.lazyloaded {
+                background: url('/assets/images/testimonial/testimonials-bg.jpg') top center;
+                background-size: cover;
+            }
         }
     }
 
