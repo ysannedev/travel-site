@@ -1,11 +1,24 @@
 var gulp = require('gulp'), /* require method is provided by Node */
     svgSprite = require('gulp-svg-sprite'),
     rename = require('gulp-rename'),
-    del = require('del');
+    del = require('del'),
+    svg2png= require('gulp-svg2png');
 
 var config = { /* gulp-svg-sprite config */
+    shape: {
+        spacing: {
+            padding: 1
+        }
+    },
     mode: {
         css: {
+            variables: {
+                replaceSvgWithPng: function() {
+                    return function(sprite, render) {
+                        return render(sprite).split('.svg').join('.png');
+                    };
+                }
+            },
             sprite: 'sprite.svg', /* renames sprite graphic file */
             render: {
                 css: {
@@ -26,8 +39,14 @@ gulp.task('createSprite', ['beginClean'], function() {  /* createSprite depends 
         .pipe(gulp.dest('./app/dist/sprite/')); /* destination folder is dist folder */
 });
 
-gulp.task('copySpriteGraphic', ['createSprite'], function() { /* copies svg sprite from dist to assets. createSprite must complete before copySpriteGraphic */
-    return gulp.src('./app/dist/sprite/css/*.svg') /* gets svg sprite from destination folder of createSprite */
+gulp.task('createPngCopy', ['createSprite'], function() {
+    return gulp.src('./app/dist/sprite/css/*.svg') 
+        .pipe(svg2png()) 
+        .pipe(gulp.dest('./app/dist/sprite/css')); 
+});
+
+gulp.task('copySpriteGraphic', ['createPngCopy'], function() { /* copies svg sprite from dist to assets. createSprite must complete before copySpriteGraphic */
+    return gulp.src('./app/dist/sprite/css/*.{svg,png}') /* gets svg sprite from destination folder of createSprite */
         .pipe(gulp.dest('./app/assets/sprite/')); /* outputs to assets folder */
 });
 
@@ -42,4 +61,4 @@ gulp.task('finishClean', ['copySpriteGraphic', 'copySpriteCSS'], function() { /*
 });
 
 /* the ultimate task of sprite.js - the one used in terminal */
-gulp.task('icons', ['beginClean', 'createSprite', 'copySpriteGraphic', 'copySpriteCSS', 'finishClean']);
+gulp.task('icons', ['beginClean', 'createSprite', 'createPngCopy', 'copySpriteGraphic', 'copySpriteCSS', 'finishClean']);
