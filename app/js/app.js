@@ -17,9 +17,11 @@
 import MobileMenu from './components/MobileMenu';
 import RevealOnScroll from './components/RevealOnScroll';
 import StickyHeader from './components/StickyHeader';
+import Modal from './components/Modal';
 import $ from 'jquery';
 
 var mobileMenu = new MobileMenu();
 var stickyHeader = new StickyHeader();
+var modal = new Modal();
 var featureItemsEffect = new RevealOnScroll($('.feature-item'), '85%');
 var testimonialItemsEffect = new RevealOnScroll($('.testimonial-item'), '60%');

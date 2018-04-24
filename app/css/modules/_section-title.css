@@ -15,6 +15,11 @@
         color: $blue;
     }
 
+    &--less-margin {
+        margin-bottom: 1.3rem;
+        margin-top: 0;
+    }
+
     &--bolder {
         strong {
             font-weight: 700;
