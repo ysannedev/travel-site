@@ -6,6 +6,10 @@
         .icon {
             background-image: url('/assets/sprite/{{{sprite}}}');
         }
+        
+        .no-svg .icon {
+            background-image: url('/assets/sprite/{{#replaceSvgWithPng}}{{{sprite}}}{{/replaceSvgWithPng}}');
+        }
     {{/first}}
 
     .icon--{{base}} { /* creates .icon--FILENAME class based on FILENAME */
