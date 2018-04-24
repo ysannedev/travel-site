@@ -10384,12 +10384,12 @@ var StickyHeader = function () {
         this.waypointTrigger = (0, _jquery2.default)('.large-hero__title')[0];
         this.createHeaderWaypoint();
         this.highlightHeaderLinks();
-        this.smoothScrollEffect();
+        this.addSmoothScroll();
     }
 
     _createClass(StickyHeader, [{
-        key: 'smoothScrollEffect',
-        value: function smoothScrollEffect() {
+        key: 'addSmoothScroll',
+        value: function addSmoothScroll() {
             this.siteHeaderLinks.smoothScroll();
         }
     }, {

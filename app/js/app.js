@@ -14,9 +14,9 @@
 // jane.greet();
 // jane.payTaxes();
 
-import MobileMenu from './modules/MobileMenu';
-import RevealOnScroll from './modules/RevealOnScroll';
-import StickyHeader from './modules/StickyHeader';
+import MobileMenu from './components/MobileMenu';
+import RevealOnScroll from './components/RevealOnScroll';
+import StickyHeader from './components/StickyHeader';
 import $ from 'jquery';
 
 var mobileMenu = new MobileMenu();
