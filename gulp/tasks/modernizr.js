@@ -8,5 +8,5 @@ gulp.task('modernizr', function() { /* check if user's browsers supports svg's a
                 'setClasses'
             ]
         }))
-        .pipe(gulp.dest('./app/dist/js/'));
+        .pipe(gulp.dest('./app/temp/js/'));
 });

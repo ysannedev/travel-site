@@ -7,10 +7,10 @@ module.exports = {
         Vendor: './app/js/Vendor.js'
     },
     output: {
-        path: path.resolve(__dirname, 'app/dist/js'),
-        // path: __dirname + 'app/dist/js',
-        // path: './app/dist/js',
-        // publicPath: 'app/dist/js',
+        path: path.resolve(__dirname, 'app/temp/js'),
+        // path: __dirname + 'app/temp/js',
+        // path: './app/temp/js',
+        // publicPath: 'app/temp/js',
         filename: '[name].js'
     },
     module: {
