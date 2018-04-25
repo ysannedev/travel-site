@@ -9,7 +9,7 @@ gulp.task('watch', function() {
         server: {
             baseDir: 'app' /* what folder to show in browser */
         }
-    })
+    });
 
     watch('./app/index.html', function() { /* watches file specified for changes */
         // gulp.start('html');

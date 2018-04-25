@@ -4,11 +4,13 @@
  {{#shapes}} /* loops through icons in assets folder */
     {{#first}} /* only outputs once in loop */
         .icon {
-            background-image: url('/assets/sprite/{{{sprite}}}');
+            /* background-image: url('/assets/sprite/{{{sprite}}}'); */
+            background-image: url('../../assets/sprite/{{{sprite}}}');
         }
         
         .no-svg .icon {
-            background-image: url('/assets/sprite/{{#replaceSvgWithPng}}{{{sprite}}}{{/replaceSvgWithPng}}');
+            /* background-image: url('/assets/sprite/{{#replaceSvgWithPng}}{{{sprite}}}{{/replaceSvgWithPng}}'); */
+            background-image: url('../../assets/sprite/{{#replaceSvgWithPng}}{{{sprite}}}{{/replaceSvgWithPng}}');
         }
     {{/first}}
 
